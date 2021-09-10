@@ -15,9 +15,9 @@ function checkBox() {
 
   if (getQtd < 10) {
     getQtd = getQtd.push;
-    console.log(1)
+    return console.log("Peca Adicionada");
   } else {
-    console.log(2);
+    return console.log("Sem Espaco");
   }
 }
 
@@ -29,9 +29,9 @@ function getWeight() {
   document.getElementById("return").innerHTML = checkWeight;
 
   if (checkWeight >= 100) {
-    console.log(1/1);
+    return console.log("Peso Ok");
   } else {
-    console.log(2/2);
+    return console.log("Peso Invalido!");
   }
 }
 
@@ -42,7 +42,8 @@ function sendName() {
   //
   const qtdLetras = 3;
   if (checkName.length > qtdLetras) {
-    console.log(1/3
+    return console.log(`Nome da Peca ${checkName}`);
   } else {
+    return console.log("Quantidade de Letras invalido");
   }
 }
