@@ -3,47 +3,43 @@
 const requestForm = document.forms.form;
 requestForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  getWeight();
-  sendName();
   checkBox();
+  getWeight();
+  getName();
+  fim();
 });
 
-let getQtd = [];
 function checkBox() {
-  getQtd = document.getElementById("sendqtd").value;
-  document.getElementById("return").innerHTML = getQtd;
-
-  if (getQtd < 10) {
-    getQtd = getQtd.push;
-    return console.log("Peca Adicionada");
-  } else {
-    return console.log("Sem Espaco");
+  checkParts = document.getElementById("parts").value;
+  if (checkParts > 10) {
+    alert("Sem Espaco");
+    return;
   }
 }
 
+//
 let checkWeight = undefined;
 function getWeight() {
-  // Recebe o valor do input e salva na variavel checkWeight
-  checkWeight = document.getElementById("sendweight").value;
-  // id returnweight recebe  o conteudo da variavel checkWeight
-  document.getElementById("return").innerHTML = checkWeight;
-
-  if (checkWeight >= 100) {
-    return console.log("Peso Ok");
-  } else {
-    return console.log("Peso Invalido!");
+  checkWeight = document.getElementById("weight").value;
+  if (checkWeight < 100) {
+    alert("Peso Invalido!");
+    return;
+  }
+}
+//
+let checkName = "";
+function getName() {
+  checkName = document.getElementById("name").value;
+  if (checkName.length <= 3) {
+    alert("Quantidade de caracteres dever ser superior 3");
+    return;
   }
 }
 
-let checkName = "";
-function sendName() {
-  checkName = document.getElementById("sendname").value;
-  document.getElementById("return").innerHTML = checkName;
-  //
-  const qtdLetras = 3;
-  if (checkName.length > qtdLetras) {
-    return console.log(`Nome da Peca ${checkName}`);
-  } else {
-    return console.log("Quantidade de Letras invalido");
+function fim() {
+  if (checkParts < 10 && checkWeight >= 100 && checkName > 3) {
+    alert("Peça Adicionada");
+    
+    return console.log(listParts);
   }
 }
