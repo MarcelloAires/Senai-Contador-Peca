@@ -16,7 +16,7 @@ function checkBox() {
     return;
   } else if (checkParts == 0 || checkParts < 0) {
     alert("Quantidade Invalida!");
-    return (checkParts = document.getElementById("reset"));
+    return (checkParts = document.getElementById("reset")).value;
   }
 }
 
@@ -30,7 +30,7 @@ function getWeight() {
   }
 }
 //
-let checkName;
+let checkName = "";
 function getName() {
   // Fallback
   checkName = document.getElementById("name").value;
@@ -41,9 +41,9 @@ function getName() {
 }
 
 function fim() {
-  if (checkParts < 10 && checkWeight >= 100 && checkName > 3) {
+  if (checkParts < 10 && checkWeight >= 100 && checkName.length > 3) {
     alert("Peça Adicionada");
 
-    return console.log(listParts);
+    return;
   }
 }
