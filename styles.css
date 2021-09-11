@@ -6,12 +6,9 @@ html {
 #container {
   display: flex;
   justify-content: center;
-
-  border: 1px solid orange;
 }
 
 form {
- 
   margin-top: 5%;
   padding: 10px;
 }
