@@ -6,7 +6,7 @@ requestForm.addEventListener("submit", (e) => {
   checkBox();
   getWeight();
   getName();
-  fim();
+  endMsg();
 });
 
 function checkBox() {
@@ -40,7 +40,7 @@ function getName() {
   }
 }
 
-function fim() {
+function endMsg() {
   if (checkParts < 10 && checkWeight >= 100 && checkName.length > 3) {
     alert("Peça Adicionada");
 
