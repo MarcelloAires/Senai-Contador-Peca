@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=div, initial-scale=1.0">
     <title>Document</title>
 
-   <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
             <fieldset>
                 <legend>Adicionar Pecas</legend>
                 <label for="sendparts">Informe a Quantidade<br>
-                    <input type="number" name="parts" id="parts" required>
+                    <input type="number" name="parts" id="parts" required="" autofocus>
                 </label><br>
 
                 <label for="sendweight">Informe o Peso<br>
@@ -24,10 +24,10 @@
                 </label><br>
 
                 <label for="sendname">Informe o Nome<br>
-                    <input type="text" name="name" id="name" required>
+                    <input type="text" name="name" id="name" required="" minlength="4">
                 </label><br>
 
-                <button type="submit" onclick="e()" onkeyup="e()">Enviar</button>
+                <button type="submit" onclick="e()" onkeyup="e()" autofocus aria-pressed="true">Enviar</button>
                 <button type="reset" name="reset" id="reset">Reset</button>
             </fieldset>
         </form>
