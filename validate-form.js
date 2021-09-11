@@ -14,11 +14,14 @@ function checkBox() {
   if (checkParts > 10) {
     alert("Sem Espaco");
     return;
+  } else if (checkParts == 0 || checkParts < 0) {
+    alert("Quantidade Invalida!");
+    return (checkParts = document.getElementById("reset"));
   }
 }
 
 //
-let checkWeight = undefined;
+let checkWeight;
 function getWeight() {
   checkWeight = document.getElementById("weight").value;
   if (checkWeight < 100) {
@@ -27,8 +30,9 @@ function getWeight() {
   }
 }
 //
-let checkName = "";
+let checkName;
 function getName() {
+  // Fallback
   checkName = document.getElementById("name").value;
   if (checkName.length <= 3) {
     alert("Quantidade de caracteres dever ser superior 3");
@@ -39,7 +43,7 @@ function getName() {
 function fim() {
   if (checkParts < 10 && checkWeight >= 100 && checkName > 3) {
     alert("Peça Adicionada");
-    
+
     return console.log(listParts);
   }
 }
